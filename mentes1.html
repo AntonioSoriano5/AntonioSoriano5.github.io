@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Portfolio</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .header {
+            position: absolute;
+            top: 2%;
+            left: 2%;
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            width: 10%;
+            height: auto;
+            margin-right: 2%;
+        }
+
+        .container {
+            max-width: 80%;
+            width: 100%;
+            margin-top: 5%;
+        }
+
+        .video-container {
+            width: 40%;
+            padding-bottom: 40%; /* 1:1 Aspect Ratio */
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin:auto;
+        }
+
+        .video-container video {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .title {
+            font-size: 34px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            text-align: justify;
+            padding: 10px;
+            font-size: 16px;
+            max-width: 60%;
+            margin: 0 auto;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            font-family: SimSun-ExtB, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #f0f0f0;
+        }
+
+        header h1 {
+            margin: 0;
+            padding: 0 20px;
+        }
+		h2 {
+            font-family: Cascadia Mono ExtraLight, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #f0f0f0;
+        }
+
+        @media (max-width: 600px) {
+            .title {
+                font-size: 20px;
+            }
+
+            .description {
+                font-size: 14px;
+                max-width: 80%;
+            }
+
+            .video-container {
+                width: 100%;
+                padding-bottom: 100%;
+                margin: auto;
+				
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://i.pinimg.com/564x/88/0e/72/880e72886aaaca2017f3cb079f6f8e9f.jpg" width= "50%"
+            height= "50%" alt="Foto de perfil">
+        <h1 style="font-size:200%;">‎  PROYECTO \ MENTES</h1>
+        <div> <a href="https://antoniosoriano5.github.io/">
+        </a>
+        </div>
+</div> <br><br><br><br><br><br>
+    <div class="container">
+        <div class="video-container">
+            <video src="https://res.cloudinary.com/dhtxbgqjv/video/upload/v1719962834/mentes1_ww7svm.mp4" autoplay loop muted playsinline></video>
+        </div> <br><br><br><br>
+        <div class="title">Mentes inmortales, Escritos de mi juventud.</div>
+		<h2>
+        <div class="description">
+            "Mentes inmortales, escritos de mi juventud" es un cortometraje documental introspectivo en el que el director revisita sus escritos de juventud. A través de estos textos, reflexiona sobre sus sueños, aspiraciones y el impacto de esos pensamientos en su vida actual. La narrativa se entrelaza con imágenes evocadoras y una voz en off que guía al espectador a través de un viaje personal y emotivo. Esta película ofrece una ventana íntima al proceso de crecimiento y autodescubrimiento del autor.
+        </div></h2>
+    </div>
+</body>
+</html>
