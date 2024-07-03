@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" type="image/png" sizes="16x16" href="https://i.pinimg.com/564x/44/86/f3/4486f38f53759ab1a82b469182f029ab.jpg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRONIA</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+  }
+	.gallery-description {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: justify;
+  }
+
+	
+	boton {
+  		position: absolute;
+  		left: 55px; 
+  		top: 37px; 
+		}	
+		
+	h11 {
+            font-family: SimSun-ExtB, sans-serif;
+            margin: 0;
+            padding: 30;
+            color: #f0f0f0;
+		font-size: 30px;
+		
+}
+	
+	h111 {
+            font-family: SimSun-ExtB, sans-serif;
+            margin: 0;
+            padding: 30;
+            color: #f0f0f0;
+		font-size: 30px;
+		left: 130px; 
+  		top: 50px;
+		position: absolute;
+		
+}
+	
+	h3 {
+            font-family: Cascadia Mono ExtraLight, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #f0f0f0;
+		font-size: 15px;
+        }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+  }
+
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+    position: relative;
+    cursor: pointer;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .overlay.active {
+    display: flex;
+  }
+
+  .overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 5px;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 48px;
+    color: #fff;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+	
+		<boton><a href="https://antoniosoriano5.github.io/">
+		
+  <img src="https://i.pinimg.com/564x/88/0e/72/880e72886aaaca2017f3cb079f6f8e9f.jpg" alt="Foto de perfil" style="width:10%;">
+			
+</a></boton>
+	
+	<a1>
+<h111 style="font-size:200%;text-align:center;">PROYECTO \ MEMORIAS \ IRONIA.</h111>
+	</a1>
+<br><br><br><br><br><br>
+	
+<div class="gallery-description">
+  <h11><strong>IRONIA.</strong></h11>
+	
+	<br><br>
+	
+  <h3>Esta serie fotográfica presenta a personas que, a través de expresiones irónicas y lenguaje corporal, nos invitan a reflexionar sobre temas profundos. Las composiciones planas y los escenarios inusuales, que a veces rozan lo absurdo, crean un contraste fascinante entre la apariencia superficial y el mensaje subyacente. Cada imagen es una ventana a la complejidad humana, utilizando la ironía y la sutilidad del cuerpo para explorar cuestiones universales y personales. A través de esta exposición, te invitamos a descubrir las múltiples capas de significado y a participar en una conversación visual sobre la condición humana.</h3>
+</div>
+
+<br><br>
+	
+<div class="gallery">
+    <!-- Imágenes aleatorias (puedes cambiar las URLs por otras imágenes) -->
+    <div class="gallery-item"><img src="https://res.cloudinary.com/dtil3onw4/image/upload/v1719977682/30092023-_MG_8757_rhsdzi.jpg"></div>
+    <div class="gallery-item"><img src="https://res.cloudinary.com/dtil3onw4/image/upload/v1719977685/30092023-_MG_8817_ewocwg.jpg"></div>
+    <div class="gallery-item"><img src="https://res.cloudinary.com/dtil3onw4/image/upload/v1719977683/30092023-_MG_8761_rsh45e.jpg"></div>
+    <div class="gallery-item"><img src="https://res.cloudinary.com/dtil3onw4/image/upload/v1719977683/30092023-_MG_8764-2_eshwvd.jpg"></div>
+   <div class="gallery-item"><img src="https://res.cloudinary.com/dtil3onw4/image/upload/v1719977683/30092023-_MG_8810_fcad5r.jpg"></div>
+  </div>
+
+  <div class="overlay">
+    <span class="close-button">&times;</span>
+    <img src="xxx" alt="Imagen ampliada">
+  </div>
+	
+	<br><br><br><br>
+			<center>
+			<h1 style="font-size:70%;text-align:center;">Reservados todos los derechos, ⓇAntonio Soriano. </h1>
+			<br><br><br><br>
+			
+					
+			
+			</center>
+
+  <script>
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const overlay = document.querySelector('.overlay');
+    const overlayImage = overlay.querySelector('img');
+    const closeButton = overlay.querySelector('.close-button');
+
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const imgSrc = item.querySelector('img').src;
+        overlayImage.src = imgSrc;
+        overlay.classList.add('active');
+      });
+    });
+
+    closeButton.addEventListener('click', () => {
+      overlay.classList.remove('active');
+    });
+  </script>
+</body>
+</html>
+
