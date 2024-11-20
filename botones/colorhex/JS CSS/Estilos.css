@@ -1,0 +1,48 @@
+/*
+* Autor: Jose Antonio Soriano Ortiz.
+* Programa: Estilos.css
+* Version: 0.00003
+* Fecha: 2/11/2024
+* Fuente: Local
+* Descripción: Estilos para cambios de fondo y colores específicos para el texto.
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+
+h1, p {
+    transition: color 0.3s ease; /* Animación para suavizar el cambio de color */
+}
+
+.Cuerpo00 {
+    background-color: rgb(255, 255, 236);
+    color: black; /* Color inicial de texto */
+}
+
+.Cuerpo01 {
+    background-color: black;
+    color: white; /* Texto blanco para fondo negro */
+}
+
+.Cuerpo02 {
+    background-color: red;
+    color: black; /* Texto negro para fondo rojo */
+}
+
+.Cuerpo03 {
+    background-color: blue;
+    color: white; /* Texto blanco para fondo azul */
+}
+
+.Cuerpo04 {
+    background-color: rgb(26, 255, 0);
+    color: black; /* Texto negro para fondo verde */
+}
+
+.Cuerpo05 {
+    background-color: white;
+    color: rgb(255, 255, 255); /* Texto blanco para fondo blanco */
+}
