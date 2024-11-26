@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exposición</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100%;
+            position: relative;
+            padding-top: 40px; /* Espacio para el marquee fijo */
+        }
+        .header {
+            padding: 10px;
+            background-color: white;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        .title {
+            font-size: 2.5em;
+            text-align: justify;
+            margin: 40px 0;
+            color: black;
+            word-wrap: break-word;
+            font-family: Arial, sans-serif;
+            
+        }
+        .marquee-container-fixed {
+            width: 100%;
+            overflow: hidden;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            box-sizing: border-box;
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+        .marquee-container-fixed .marquee {
+            animation: marquee-rtl 30s linear infinite;
+            white-space: nowrap;
+        }
+        @keyframes marquee-rtl {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            background-color: greenyellow;
+            color: white;
+            text-align: center;
+            margin-top: 5px;
+            box-sizing: border-box;
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+        .marquee {
+            display: inline-block;
+            animation: marquee-ltr 30s linear infinite;
+            font-size: 1.5em;
+            white-space: nowrap;
+            font-family: Arial, sans-serif;
+        }
+        @keyframes marquee-ltr {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        .content {
+            flex: 1;
+            background-color: grey;
+            color: white;
+            padding: 20px;
+            padding-top: 5px;
+            text-align: justify;
+            overflow-y: auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .footer {
+            background-color: darkorange;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .footer a {
+            color: white; /* Color del enlace */
+            text-decoration: underline; /* Enlace subrayado */
+        }
+        h2 {
+            color: white;
+            background-color: transparent;
+            padding: 10px 0;
+        }
+        h3 {
+            color: blue;
+            background-color: transparent;
+            padding: 10px 0;
+            font-family: Arial, sans-serif;
+            font-size: 1.5em;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 0.9;
+            text-align: justify;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee-container-fixed">
+        <div class="marquee">• 28.11.24 / 18:30 • 28.11.24 / 18:30 • 28.11.24 / 18:30 • 28.11.24 / 18:30 • 28.11.24 / 18:30 • 28.11.24 / 18:30 • 28.11.24 / 18:30 • 28.11.24 / 18:30 •</div>
+    </div>
+    <div class="header">
+        <div class="title">
+            <center>Exposición</center><br>
+            <span style="float: left">Arquitectura</span><br>
+            <center>e</center>
+            <span style="float: right">Ingeniería</span>
+            <br>
+            <center>Civil</center>
+        </div>
+    </div>
+    <div class="marquee-container">
+        <div class="marquee">• 28.11.24 / 18:30 • 28.11.24 / 18:30 • 28.11.24 / 18:30 • 28.11.24 / 18:30 • 28.11.24 / 18:30 • 28.11.24 / 18:30 • 28.11.24 / 18:30 • 28.11.24 / 18:30 •</div>
+    </div>
+    <div class="content">
+        <h2>Gran exposición Final</h2>
+        <p>Organizado por Lobos Alamedas, la exposición final de cuatrimestre es el evento principal de la temporada. Los estudiantes de las carreras de Arquitectura e Ingeniería Civil presentarán sus proyectos destacados, demostrando su creatividad y habilidades técnicas a través de una impresionante exhibición de planos, renders y maquetas.
+        <br> 
+        <br> El evento presentado por Lobos Alamedas, es una celebración del talento y esfuerzo de los estudiantes de Arquitectura e Ingeniería Civil. Reunirá los mejores proyectos desarrollados durante el cuatrimestre, desde planos y renders hasta maquetas meticulosamente diseñadas, cada pieza reflejando el aprendizaje práctico y la creatividad de los estudiantes.</p>
+        <h3><span style="color: blue">28.11.24  <br>18:30</span> <br> <span style="float: right; color: black; font-size: 0.9em; line-height: 0.9; font-family: inherit;">Patio central <br> <span style="color: red">UAD</span> <span style="color: white">Alamedas.</span></span></h3> <br>
+        
+        <h2>Colors</h2>
+        <p>Uno de los momentos más destacados del evento será la competencia Colors, organizada por el arquitecto Alonso Limones. Esta emocionante actividad ha desafiado a los estudiantes del cuarto cuatrimestre a superar cuatro etapas: la creación de un pabellón, el diseño de un libreto, el desarrollo de un concepto y, finalmente, la elaboración de una maqueta. Durante la presentación final, los equipos mostrarán sus obras maestras y se anunciará al gran ganador, brindando una oportunidad única para reconocer la innovación y el trabajo en equipo.</p>
+      
+        <p>El evento no solo busca exhibir proyectos, sino también conectar a los participantes con su entorno académico y profesional. La exposición está diseñada para resaltar el talento de los estudiantes de todos los niveles, quienes demuestran cómo la teoría y la práctica se entrelazan para crear soluciones creativas e impactantes. Cada proyecto cuenta una historia, desde los conceptos iniciales hasta las piezas finales que serán presentadas ante el público.</p>
+        
+        <h2>Experiencia Única</h2>
+        <p>Para quienes asistan, promete ser una experiencia visual única. Las maquetas, renders y planos estarán acompañados de explicaciones detalladas que permitirán a los asistentes comprender el proceso creativo detrás de cada obra. Este evento también destaca la importancia de la interdisciplinariedad, mostrando cómo la colaboración entre distintas materias enriquece los resultados.</p>
+    </div>
+    <div class="footer">
+        Todos los derechos de la página reservados <br>por <a href="https://www.instagram.com/tootracktor.png/?hl=es" target="_blank">Antonio Soriano</a>
+    </div>
+</body>
+</html>
+
+
