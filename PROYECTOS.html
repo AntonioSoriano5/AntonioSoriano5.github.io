@@ -3,195 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos</title>
+    <title>Proyectos finales</title>
     <style>
         body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: black;
-            font-family: Arial, sans-serif;
-            padding-top: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra todo el contenido horizontalmente */
+            text-align: center; /* Centra el texto */
+            overflow-x: hidden; /* Evita el desplazamiento horizontal */
         }
 
-        .titulo-marquee {
-            white-space: nowrap;
-            overflow: hidden;
-            position: relative;
+        header {
             width: 100%;
-            color: white;
-            font-size: 3.5em;
+            background-color: #000; /* Cambiado a negro */
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
 
-        .titulo-marquee div {
-            display: inline-block;
-            padding-left: 100%;
-            animation: marquee 15s linear infinite;
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            font-family: Arial, sans-serif; /* Tipografía del título */
         }
 
-        .titulo-marquee span {
-            padding: 0 2em;
-        }
-
-        @keyframes marquee {
-            0% {
-                transform: translateX(0%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        .contenedor-proyectos {
+        .container {
             width: 100%;
-            margin: 0 auto;
+            max-width: 1200px;
+            margin: 100px auto 20px; /* Espacio superior para el header fijo */
             padding: 20px;
+            box-sizing: border-box;
+            text-align: left; /* Alineación izquierda para textos */
         }
 
-        .proyecto {
-            margin-bottom: 40px;
-            text-align: center;
-            width: 100%;
+        .section {
+            margin: 20px 0;
         }
 
-        .proyecto button {
-            background: none;
-            border: none;
+        .title {
+            font-size: 2.5em;
+            margin: 10px 0;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #ccc;
+        }
+
+        .content {
+            font-size: 1.1em; /* Tamaño del texto */
+            line-height: 1.6; /* Interlineado */
+            font-family: Arial, sans-serif; /* Tipografía */
+        }
+
+        .images {
+            display: flex;
+            flex-wrap: wrap; /* Imágenes en filas */
+            gap: 20px;
+            justify-content: center; /* Centrar las imágenes */
+            margin: 20px 0;
+        }
+
+        .images img {
+            width: 100%; /* Ancho completo de las imágenes */
+            max-width: 100%; /* Limitar ancho máximo al 100% del contenedor */
+            height: auto;
+            border-radius: 5px;
             cursor: pointer;
-            padding: 0;
+            aspect-ratio: 1.77 / 1;
             transition: transform 0.3s ease;
-            width: 100%;
         }
 
-        .proyecto button:hover {
+        .images img:hover {
             transform: scale(1.05);
         }
 
-        .proyecto img {
-            width: 100vw;
-            height: auto;
-            border-radius: 10px;
-            object-fit: cover;
-        }
-
-        .proyecto h2 {
-            color: white;
-            font-size: 1.8em;
-            margin: 15px 0;
-        }
-
-        .proyecto p {
-            color: white;
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
-
         footer {
+            text-align: center; /* Centrar el texto del footer */
+            padding: 20px;
+            font-size: 0.9em;
             background-color: black;
             color: white;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-            bottom: 0;
             width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
         }
 
-        footer p {
-            font-size: 0.8em;
-            margin: 0;
-        }
+        /* Comentario llamativo sobre los parámetros de ancho */
+        /* 
+            Los parámetros que controlan el ancho de la página están en:
+            - max-width: 1200px; en .container para limitar el ancho máximo.
+            - width: 100%; y max-width: 100%; en .images img para asegurar que las imágenes se ajusten al contenedor.
+            - overflow-x: hidden; en body para evitar desplazamiento horizontal.
+        */
     </style>
 </head>
 <body>
-    <div class="titulo-marquee">
-        <div>
-            <span>PROYECTOS</span><span>DE FINAL</span><span>DE CUATRIMESTRE</span><span> XXX</span>
+    <header>
+        <h1>Proyectos finales</h1>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <div class="images">
+                <a href="https://antoniosoriano5.github.io/xxx.html" target="_blank">
+                    <img src="https://res.cloudinary.com/dtil3onw4/image/upload/v1732726564/Captura_de_pantalla_2024-11-27_105542_dh0nop.png" alt="Días de Otoño">
+                </a>
+				
+            </div>
+            <h2 class="title">Días de Otoño.</h2>
+            <p class="content" style="font-size: 16px; line-height: 1.2; font-family: 'Arial', serif;">
+                Comercial dirigido por Antonio Soriano.
+            </p>
+        </div>
+<br>
+        <div class="section">
+            <div class="images">
+                <a href="https://antoniosoriano5.github.io/xx.html" target="_blank">
+                    <img src="https://res.cloudinary.com/dtil3onw4/image/upload/v1732693483/Captura_de_pantalla_2024-11-27_013831_md4zoj.png" alt="Cortometraje">
+                </a>
+            </div>
+            <h2 class="title">Último Encuentro</h2>
+            <p class="content" style="font-size: 16px; line-height: 1.2; font-family: 'Arial', serif;">
+                Cortometraje dirigido por Alexander Ponces.
+            </p>
+        </div>
+<br>
+        <div class="section">
+            <div class="images">
+                <a href="https://antoniosoriano5.github.io/x.html" target="_blank">
+                    <img src="https://res.cloudinary.com/dtil3onw4/image/upload/v1732693482/Captura_de_pantalla_2024-11-27_013859_zel4cx.png" alt="Video Musical">
+                </a>
+            </div>
+            <h2 class="title">Birth of the Flower</h2>
+            <p class="content" style="font-size: 16px; line-height: 1.2; font-family: 'Arial', serif;">
+                Video musical dirigido por Emiliano G. Caballero.
+            </p>
         </div>
     </div>
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            width: 100%;
-        }
-
-        .contenedor-proyectos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 100%;
-            box-sizing: border-box;
-        }
-
-        @media screen and (max-width: 768px) {
-            .titulo {
-                font-size: 1.8em;
-                padding: 10px;
-            }
-
-            .proyecto h2 {
-                font-size: 1.5em;
-            }
-
-            .proyecto p {
-                font-size: 1em;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .contenedor-proyectos {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-    <style>
-        .proyecto h2,
-        .proyecto p {
-            text-align: left;
-            padding-left: 10px;
-        }
-    </style>
-
-    <div class="contenedor-proyectos">
-        <div class="proyecto">
-            <button>
-                <img src="https://via.placeholder.com/500x300" alt="Proyecto 1">
-            </button>
-            <h2>proyectos.</h2>
-            <p>Proyectos elaborados en el transcurso del cuatrimestre.</p>
-        </div>
-
-        <div class="proyecto">
-            <button>
-                <img src="https://via.placeholder.com/500x300" alt="Proyecto 2">
-            </button>
-            <h2>Dias de Otoño.</h2>
-            <p>Comercial para el cafe 34000 dirigido por Antonio Soriano.</p>
-        </div>
-
-        <div class="proyecto">
-            <button>
-                <img src="https://via.placeholder.com/500x300" alt="Proyecto 3">
-            </button>
-            <h2>xxx</h2>
-            <p>Cortometraje dirigido por Alexander Ponces.</p>
-        </div>
-
-        <div class="proyecto">
-            <button>
-                <img src="https://via.placeholder.com/500x300" alt="Proyecto 4">
-            </button>
-            <h2>xxx</h2>
-            <p>Video musical elaborado por Emiliano G. Caballero.</p>
-        </div>
-    </div>
-
+<br><br>
     <footer>
-        <p>Derechos reservados © 2024</p>
+        © 2024 Antonio Soriano.
     </footer>
 </body>
 </html>
-
 
