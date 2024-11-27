@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra todo el contenido horizontalmente */
+            text-align: center; /* Centra el texto */
+            overflow-x: hidden; /* Evita el desplazamiento horizontal */
+        }
+
+        header {
+            width: 100%;
+            background-color: #000; /* Cambiado a negro */
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 100px auto 20px; /* Espacio superior para el header fijo */
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: left; /* Alineación izquierda para textos */
+        }
+
+        .banner {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .section {
+            margin: 20px 0;
+        }
+
+        .title {
+            font-size: 2.5em;
+            margin: 10px 0;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #ccc;
+        }
+
+        .content {
+            font-size: 1.1em; /* Tamaño del texto */
+            line-height: 1.6; /* Interlineado */
+            font-family: Arial, sans-serif; /* Tipografía */
+        }
+
+        .images {
+            display: flex;
+            flex-wrap: wrap; /* Imágenes en filas */
+            gap: 20px;
+            justify-content: center; /* Centrar las imágenes */
+            margin: 20px 0;
+        }
+
+        .images img {
+            width: 100%; /* Ancho completo de las imágenes */
+            max-width: 100%; /* Limitar ancho máximo al 100% del contenedor */
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+            aspect-ratio: 1.77 / 1;
+            transition: transform 0.3s ease;
+        }
+
+        .images img:hover {
+            transform: scale(1.05);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            position: relative;
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            width: auto;
+        }
+
+        .close {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+            transform: translateY(-50%);
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center; /* Centrar el texto del footer */
+            padding: 20px;
+            font-size: 0.9em;
+            background-color: black;
+            color: white;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Proyecto</h1>
+    </header>
+    <div class="container">
+        <img src="https://via.placeholder.com/1200x300" alt="Banner" class="banner">
+        <div class="section">
+            <h2 class="title">Subtítulo del Proyecto</h2>
+            <p class="content" style="font-size: 16px; line-height: 1.2; font-family: 'Arial', serif;">Este es un párrafo descriptivo del proyecto. Aquí puedes incluir cualquier tipo de información relevante que quieras compartir sobre el proyecto en cuestión.</p>
+        </div>
+        <div class="section">
+            <h2 class="title">Galería de Imágenes</h2>
+            <div class="images">
+                <img src="https://via.placeholder.com/200" alt="Imagen 1" onclick="openModal(this.src)">
+                <img src="https://via.placeholder.com/200" alt="Imagen 2" onclick="openModal(this.src)">
+                <img src="https://via.placeholder.com/200" alt="Imagen 3" onclick="openModal(this.src)">
+                <img src="https://via.placeholder.com/200" alt="Imagen 4" onclick="openModal(this.src)">
+                <img src="https://via.placeholder.com/200" alt="Imagen 5" onclick="openModal(this.src)">
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">X</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <footer>
+        Derechos de autor por Antonio Soriano.
+    </footer>
+
+    <script>
+        function openModal(src) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "flex";
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
