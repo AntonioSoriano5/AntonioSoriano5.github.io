@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            font-family: Arial, sans-serif;
+            padding-top: 80px;
+        }
+
+        .titulo-marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            color: white;
+            font-size: 3.5em;
+        }
+
+        .titulo-marquee div {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 15s linear infinite;
+        }
+
+        .titulo-marquee span {
+            padding: 0 2em;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .contenedor-proyectos {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .proyecto {
+            margin-bottom: 40px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .proyecto button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+
+        .proyecto button:hover {
+            transform: scale(1.05);
+        }
+
+        .proyecto img {
+            width: 100vw;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .proyecto h2 {
+            color: white;
+            font-size: 1.8em;
+            margin: 15px 0;
+        }
+
+        .proyecto p {
+            color: white;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 0.8em;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="titulo-marquee">
+        <div>
+            <span>PROYECTOS</span><span>DE FINAL</span><span>DE CUATRIMESTRE</span><span> XXX</span>
+        </div>
+    </div>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        .contenedor-proyectos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        @media screen and (max-width: 768px) {
+            .titulo {
+                font-size: 1.8em;
+                padding: 10px;
+            }
+
+            .proyecto h2 {
+                font-size: 1.5em;
+            }
+
+            .proyecto p {
+                font-size: 1em;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .contenedor-proyectos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <style>
+        .proyecto h2,
+        .proyecto p {
+            text-align: left;
+            padding-left: 10px;
+        }
+    </style>
+
+    <div class="contenedor-proyectos">
+        <div class="proyecto">
+            <button>
+                <img src="https://via.placeholder.com/500x300" alt="Proyecto 1">
+            </button>
+            <h2>proyectos.</h2>
+            <p>Proyectos elaborados en el transcurso del cuatrimestre.</p>
+        </div>
+
+        <div class="proyecto">
+            <button>
+                <img src="https://via.placeholder.com/500x300" alt="Proyecto 2">
+            </button>
+            <h2>Dias de Otoño.</h2>
+            <p>Comercial para el cafe 34000 dirigido por Antonio Soriano.</p>
+        </div>
+
+        <div class="proyecto">
+            <button>
+                <img src="https://via.placeholder.com/500x300" alt="Proyecto 3">
+            </button>
+            <h2>xxx</h2>
+            <p>Cortometraje dirigido por Alexander Ponces.</p>
+        </div>
+
+        <div class="proyecto">
+            <button>
+                <img src="https://via.placeholder.com/500x300" alt="Proyecto 4">
+            </button>
+            <h2>xxx</h2>
+            <p>Video musical elaborado por Emiliano G. Caballero.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Derechos reservados © 2024</p>
+    </footer>
+</body>
+</html>
+
+
