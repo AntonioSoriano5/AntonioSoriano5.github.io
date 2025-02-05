@@ -1,0 +1,103 @@
+/*
+Autor: Jose Antonio Soriano Ortiz
+Versión: 3.7
+Fecha: 03 de Febrero de 2025
+Descripción: Estilos para el carrusel con fondo negro, imágenes grandes y descripciones dinámicas.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+/* Logo en la parte superior derecha */
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 35px;
+    font-family: 'Lobster', cursive;
+    color: pink;
+}
+
+/* Carrusel ocupa todo el ancho */
+.carousel {
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* Contenedor de imágenes */
+.carousel-container {
+    display: flex;
+    width: 1000%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Cada slide ocupa un 10% del total */
+.slide {
+    width: 10%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Contenedor de la descripción */
+.description-container {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    width: 300px;
+}
+
+.description {
+    text-align: justify;
+    font-size: 18px;
+}
+
+/* Derechos reservados */
+.rights {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+/* Botones de navegación */
+.controls {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.controls button {
+    background-color: #242424;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.controls button:hover {
+    background-color: pink;
+}

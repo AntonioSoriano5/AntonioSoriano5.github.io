@@ -1,0 +1,44 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    font-family: 'Lobster', cursive; /* Tipografía de Google Fonts */
+}
+
+/* Estilos para el título */
+.titulo {
+    color: red; /* Color rojo */
+    font-size: 4rem; /* Tamaño grande */
+    margin-bottom: 20px; /* Espaciado inferior */
+    text-align: center;
+}
+
+/* Contenedor de imágenes */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Asegura que las imágenes se ajusten en pantallas pequeñas */
+}
+
+/* Estilos para las imágenes */
+.animated-image {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Efecto de hover en las imágenes */
+.animated-image:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
